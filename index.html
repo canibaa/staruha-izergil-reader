@@ -4,106 +4,88 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#10131d">
-<title>Старуха Изергиль — скорочтение</title>
+<meta name="description" content="Подробный пересказ рассказа Максима Горького «Старуха Изергиль» с режимом скорочтения и чтения на весь экран.">
+<title>Старуха Изергиль — читатель</title>
 <style>
-:root{color-scheme:dark;--bg:#10131d;--panel:#191e2c;--muted:#9ca8bd;--text:#f4f6fb;--accent:#f0b35a;--line:#30394c}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#222b40 0,var(--bg) 55%);color:var(--text);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
-main{width:min(980px,100%);margin:auto;padding:24px 18px 44px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.eyebrow{color:var(--accent);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}h1{font-size:clamp(1.7rem,5vw,3rem);line-height:1.1;margin:8px 0} .sub{color:var(--muted);margin:0 0 22px}
-.panel{background:rgba(25,30,44,.94);border:1px solid var(--line);border-radius:20px;padding:clamp(16px,4vw,28px);box-shadow:0 18px 60px #0003;margin:16px 0}
-#wordStage{min-height:240px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;border-radius:16px;background:#111622;border:1px solid #2b3448;padding:20px}
-#word{font-size:clamp(2rem,9vw,5.4rem);font-weight:750;letter-spacing:-.04em;overflow-wrap:anywhere;max-width:100%}#word.empty{font-size:1.3rem;color:var(--muted);font-weight:500;letter-spacing:0}
-#context{color:var(--muted);font-size:.9rem;text-align:center;margin:12px 0 0;min-height:1.4em}
-.controls{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:16px}button,select,input{font:inherit;color:var(--text);background:#242c3e;border:1px solid #3b465d;border-radius:11px;padding:10px 13px}button{cursor:pointer;transition:transform .12s,border-color .12s}button:hover{border-color:var(--accent)}button:active{transform:scale(.98)}button.primary{background:var(--accent);color:#21190e;border-color:var(--accent);font-weight:800}button:disabled{opacity:.4;cursor:not-allowed}.control-label{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:.92rem;flex-wrap:wrap}.control-label input[type=range]{padding:0;width:125px;accent-color:var(--accent)}.control-label select{max-width:100%}
-.progress{height:7px;background:#2b3448;border-radius:20px;overflow:hidden;margin:18px 0 8px}.progress>div{height:100%;width:0;background:var(--accent);transition:width .12s}.meta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:.86rem;flex-wrap:wrap}.section-title{margin:0 0 10px;font-size:1.15rem}.section-desc{color:var(--muted);margin:0 0 14px;font-size:.94rem}.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}.part{padding:14px;text-align:left;min-height:70px}.part strong{display:block;margin-bottom:4px}.part span{display:block;color:var(--muted);font-size:.84rem}.part.active{border-color:var(--accent);background:#382f25}.note{color:var(--muted);font-size:.9rem}.below{display:grid;grid-template-columns:1fr 1fr;gap:16px}.below .panel{margin:0}.summary{margin:0;padding-left:20px}.summary li{margin:8px 0}.tag{display:inline-block;border:1px solid #46516a;color:#dbe3f5;border-radius:99px;padding:4px 9px;font-size:.8rem;margin:3px 3px 3px 0}
-@media(max-width:650px){main{padding:18px 12px 30px}.panel{border-radius:16px;padding:15px}#wordStage{min-height:200px}.below{grid-template-columns:1fr}.controls button{flex:1}.control-label{width:100%;justify-content:space-between}.control-label input[type=range]{flex:1;max-width:190px}.control-label select{flex:1}}
+:root{color-scheme:dark;--bg:#10131d;--panel:#191e2c;--muted:#aab4c7;--text:#f5f6fb;--accent:#f0b35a;--line:#30394c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,select,input{font:inherit;color:inherit;background:#252d40;border:1px solid #414c63;border-radius:10px;padding:10px 13px}button{cursor:pointer}button:hover{border-color:var(--accent)}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.primary{background:var(--accent);color:#21190e;border-color:var(--accent);font-weight:750}.muted{color:var(--muted)}header,main{width:min(1040px,100%);margin:auto;padding:20px}header{padding-bottom:4px}.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:800}h1{font-size:clamp(2rem,6vw,3.7rem);line-height:1.08;margin:8px 0 12px;letter-spacing:-.04em}.lead{color:var(--muted);max-width:760px;margin:0 0 18px}.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(14px,3vw,24px);margin:16px 0}.label{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:.93rem}.label input[type=range]{width:125px;padding:0;accent-color:var(--accent)}.settings{display:flex;gap:14px;flex-wrap:wrap;align-items:center}.settings select{max-width:100%}.stage{min-height:280px;display:grid;place-items:center;text-align:center;background:#111622;border:1px solid #2b3448;border-radius:15px;padding:22px;overflow:hidden}.word{font-size:clamp(2.5rem,9vw,6rem);line-height:1.2;font-weight:800;letter-spacing:-.045em;overflow-wrap:anywhere}.context{text-align:center;color:var(--muted);min-height:1.6em;margin:12px 0}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.controls button{flex:1}.progress{height:7px;background:#2b3448;border-radius:9px;overflow:hidden;margin:17px 0 8px}.progress div{height:100%;width:0;background:var(--accent)}.meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px}.part{text-align:left;min-height:76px}.part strong,.part span{display:block}.part span{font-size:.85rem;color:var(--muted);margin-top:3px}.part.active{border-color:var(--accent);background:#382f25}.retelling{max-width:780px;margin:0 auto}.retelling h2{font-size:clamp(1.35rem,4vw,1.9rem);line-height:1.25;margin-top:0}.retelling p{font-size:1.08rem;margin:0 0 1.1em}.retelling .chapter{padding:clamp(16px,4vw,30px);border-bottom:1px solid var(--line)}.retelling .chapter:last-child{border-bottom:0}.keypoints{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.keypoints article{background:#111622;border:1px solid var(--line);padding:15px;border-radius:13px}.keypoints h3{margin:0 0 5px}.keypoints p{margin:0;color:var(--muted)}.hidden{display:none!important}.reading-mode body{background:#0c0d11}.reading-mode header{display:none}.reading-mode main{width:min(900px,100%);padding:16px}.reading-mode .top-controls{position:sticky;top:0;z-index:2;background:#10131d;padding:8px 0}.reading-mode .retelling .chapter{padding:clamp(20px,5vw,48px) 0}.reading-mode .retelling p{font-size:clamp(1.15rem,2.3vw,1.5rem);line-height:1.9}.reading-mode .retelling h2{font-size:clamp(1.6rem,3vw,2.3rem)}body.word-fullscreen #readerPanel{position:fixed;inset:0;z-index:20;margin:0;border-radius:0;border:0;display:flex;flex-direction:column;justify-content:center;padding:clamp(12px,4vw,42px);overflow:auto}body.word-fullscreen #readerPanel .stage{flex:1;min-height:35vh}body.word-fullscreen #readerPanel .word{font-size:clamp(3rem,13vw,9rem)}body.word-fullscreen #exitFull{display:inline-block!important}@media(max-width:600px){header,main{padding:15px 12px}.panel{border-radius:14px}.stage{min-height:220px}.controls button{min-width:42%;padding:11px 8px}.settings{display:grid;grid-template-columns:1fr;width:100%}.label{justify-content:space-between}.label input[type=range]{flex:1;max-width:180px}.retelling p{font-size:1rem}.reading-mode main{padding:12px}}
 </style>
 </head>
 <body>
-<main>
-  <div class="top"><div class="eyebrow">Литература · 11 класс</div><span class="tag">Пересказ для подготовки</span></div>
+<header>
+  <div class="eyebrow">Литература · 11 класс</div>
   <h1>Старуха Изергиль</h1>
-  <p class="sub">Максим Горький · читай по одному слову, регулируй темп и переключайся между частями.</p>
-  <section class="panel" aria-label="Плеер скорочтения">
-    <div class="controls" style="margin-top:0">
-      <label class="control-label">Часть
-        <select id="partSelect" aria-label="Выбрать часть"></select>
-      </label>
-      <label class="control-label">Скорость <strong id="speedValue">180</strong> слов/мин
-        <input id="speed" type="range" min="60" max="600" step="10" value="180" aria-label="Скорость чтения">
-      </label>
-    </div>
-    <div id="wordStage" aria-live="polite"><div id="word">Готов?</div></div>
-    <div id="context">Нажми «Старт», чтобы начать чтение</div>
-    <div class="progress"><div id="progressFill"></div></div>
-    <div class="meta"><span id="counter">0 / 0 слов</span><span id="elapsed">Осталось: —</span></div>
-    <div class="controls">
-      <button class="primary" id="toggle">▶ Старт</button>
-      <button id="prev">← Слово</button>
-      <button id="next">Слово →</button>
-      <button id="restart">↺ Сначала</button>
-    </div>
-    <div class="controls">
-      <label class="control-label">Размер слова
-        <input id="fontSize" type="range" min="30" max="100" value="86" step="2" aria-label="Размер текста">
-      </label>
-      <label class="control-label"><input id="showContext" type="checkbox" checked> Показывать контекст</label>
-    </div>
-    <p class="note">Подсказка: пробел — пауза/продолжение, стрелки ← → — предыдущее/следующее слово.</p>
-  </section>
-  <section class="panel">
-    <h2 class="section-title">Части пересказа</h2>
-    <p class="section-desc">Выбери нужный эпизод — плеер начнёт с него.</p>
-    <div class="parts" id="parts"></div>
-  </section>
-  <div class="below">
-    <section class="panel">
-      <h2 class="section-title">Главные герои</h2>
-      <ul class="summary">
-        <li><strong>Ларра</strong> — сын женщины и орла; гордый, считает себя выше других и отвергает людей.</li>
-        <li><strong>Данко</strong> — смелый юноша, который спасает племя, пожертвовав собой.</li>
-        <li><strong>Изергиль</strong> — пожилая рассказчица, прожившая бурную жизнь и размышляющая о свободе и любви.</li>
-        <li><strong>Рассказчик</strong> — слушает Изергиль у моря и передаёт её истории.</li>
-      </ul>
-    </section>
-    <section class="panel">
-      <h2 class="section-title">Что важно запомнить</h2>
-      <ul class="summary">
-        <li>Ларра символизирует эгоизм и одиночество.</li>
-        <li>Данко символизирует самоотверженность и любовь к людям.</li>
-        <li>Изергиль рассказывает о цене свободы, любви и жизненного выбора.</li>
-        <li>Легенды противопоставляют жизнь только ради себя и жизнь ради других.</li>
-      </ul>
-    </section>
+  <p class="lead">Подробный пересказ Максима Горького: сначала рассказан сам сюжет, затем — скорочтение по одному слову. Можно открыть весь текст на весь экран.</p>
+  <div class="toolbar">
+    <button class="primary" id="showTextBtn">📖 Читать весь пересказ</button>
+    <button id="showReaderBtn">▶ Режим скорочтения</button>
+    <button id="fullTextBtn">⛶ Текст на весь экран</button>
   </div>
-  <p class="note">Это подробный пересказ, а не полный оригинальный текст произведения.</p>
+</header>
+<main>
+<section id="textPanel" class="panel">
+  <div class="top-controls toolbar">
+    <button id="textFullscreen" class="primary">⛶ На весь экран</button>
+    <label class="label">Размер текста <input id="textSize" type="range" min="16" max="30" value="19"></label>
+    <button id="backTop">↑ В начало</button>
+  </div>
+  <article class="retelling" id="retelling">
+    <section class="chapter"><h2>1. Встреча с Изергиль</h2><p>Рассказчик находится в Бессарабии, у моря, где собирают виноград. Вечером он сидит рядом с пожилой женщиной по имени Изергиль. Она очень старая: лицо у неё покрыто морщинами, кожа сухая, голос звучит хрипло. Но память у неё живая, и она охотно вспоминает прошлое. Ночь, море, степь и далёкие огни создают ощущение, будто обычная жизнь постепенно превращается в легенду.</p><p>Изергиль рассказывает о людях, которых знала, и о событиях, которые пережила. Между воспоминаниями она передаёт две древние легенды — о Ларре и Данко. Эти истории противопоставлены друг другу: один человек ставит себя выше всех, другой отдаёт себя ради других.</p></section>
+    <section class="chapter"><h2>2. Легенда о происхождении Ларры</h2><p>Много лет назад в одном племени жила девушка. Однажды её похитил орёл и унёс высоко в горы. Люди долго искали пропавшую, но найти её не смогли. Спустя двадцать лет орёл состарился и умер, а женщина вернулась к своему племени. С ней был сын Ларра, рождённый от орла.</p><p>Ларра вырос красивым, сильным и смелым юношей, но в нём не было уважения к другим. Он считал себя лучше всех, не желал подчиняться обычаям племени и не понимал, почему должен считаться с чужими желаниями. Он привык брать то, что хотел, и не думал о последствиях своих поступков.</p></section>
+    <section class="chapter"><h2>3. Преступление и наказание Ларры</h2><p>Однажды Ларра захотел сблизиться с дочерью одного из старейшин. Девушка отвергла его и оттолкнула. Для Ларры отказ оказался не просто обидой: он не мог принять мысль, что другой человек имеет право сказать ему «нет». В ярости он убил девушку на глазах у племени.</p><p>Люди схватили Ларру и стали решать, как его наказать. Но юноша не раскаивался и не видел в своём поступке ничего неправильного. Старейшины поняли, что обычное наказание не заставит его измениться: Ларра не дорожил ни чужой жизнью, ни мнением общества. Тогда племя оттолкнуло его и оставило одного.</p><p>Сначала Ларра пытался вернуться и силой добиться своего. Но постепенно он понял, что никто не хочет иметь с ним дела. Его нельзя было убить обычным способом, и в итоге он получил страшное наказание — вечное одиночество. Он стал скитаться по земле, не находя ни близости, ни покоя, ни смерти. Так гордость, превращённая в презрение к людям, обернулась для него пустой и бесконечной жизнью.</p></section>
+    <section class="chapter"><h2>4. Молодость Изергиль</h2><p>После истории о Ларре Изергиль переходит к собственной жизни. В молодости она была красивой, энергичной и независимой. Ей нравились любовь, риск и сильные чувства. Она не хотела жить так, как от неё ожидали другие, и не собиралась оставаться рядом с человеком только потому, что так было принято. Если чувства исчезали или отношения превращались в ограничение свободы, она уходила.</p><p>Первым её возлюбленным был рыбак. Он пел, работал и жил свободно, но Изергиль со временем увлеклась другим человеком. В её жизни появлялись разные мужчины — гуцул, турок, поляк и другие. Она вспоминала их не как список побед, а как череду страстей, ошибок, опасностей и решений. Иногда любовь делала её счастливой, иногда приносила боль, но она предпочитала прожить жизнь ярко, а не прятаться от переживаний.</p></section>
+    <section class="chapter"><h2>5. Любовь, свобода и поступки Изергиль</h2><p>Изергиль рассказывает, что любила по-разному. Иногда её привлекали сила и смелость, иногда — нежность или необычный характер человека. Она могла быстро увлечься, но не терпела, когда её пытались удержать силой или сделать своей собственностью. Для неё любовь не означала полного отказа от собственной воли.</p><p>В её прошлом были рискованные решения и поступки, которыми она помогала тем, кто был ей дорог. Она вспоминает, как вмешивалась в опасные ситуации, в том числе ради спасения человека, которому угрожала гибель. При этом Изергиль не изображает себя безупречной: она могла быть импульсивной, ревнивой и жестокой, а некоторые её решения приносили страдания другим. Но она всегда действовала сама и принимала последствия своего выбора.</p><p>Годы прошли. Красота и молодость исчезли, многие любимые люди умерли или остались далеко в прошлом. Изергиль состарилась и теперь живёт воспоминаниями. Её история показывает не идеальную жизнь, а жизнь, прожитую в движении, любви, свободе и постоянном выборе.</p></section>
+    <section class="chapter"><h2>6. Легенда о Данко: племя в лесу</h2><p>Затем Изергиль рассказывает другую легенду. Когда-то одно племя было изгнано врагами в густой лес. Впереди лежали болота и темнота, позади находились преследователи. Люди оказались в ловушке: вернуться означало погибнуть от врагов, а идти вперёд — заблудиться в лесу и умереть от голода или усталости.</p><p>Страх постепенно разрушал людей. Они спорили, обвиняли друг друга и теряли надежду. Одни хотели повернуть назад, другие злились на всех вокруг. В такой момент появился молодой Данко. Он был смелым, красивым и верил, что способен вывести людей к свободе. Данко предложил повести племя через лес, и люди пошли за ним.</p></section>
+    <section class="chapter"><h2>7. Подвиг Данко</h2><p>Путь оказался гораздо тяжелее, чем люди ожидали. Лес был густым, ветви цеплялись за одежду, болота мешали идти, а тьма казалась бесконечной. Люди уставали, начинали сомневаться и всё чаще обвиняли Данко. Вместо того чтобы признать собственный страх, они решили, что виноват тот, кто вызвался вести их.</p><p>В конце концов толпа окружила Данко и стала угрожать ему. Он мог озлобиться на людей, бросить их или попытаться спастись самому. Но Данко любил племя и хотел, чтобы люди жили свободно. Его сердце загорелось такой сильной любовью, что он вырвал его из груди и поднял над головой. Сердце вспыхнуло ярким огнём и осветило дорогу среди деревьев.</p><p>Увидев свет, люди снова обрели надежду и бросились вперёд. Данко шёл перед ними, освещая путь собственным сердцем. Он вывел племя из страшного леса на открытую землю. Задача была выполнена: люди спаслись, но Данко упал и умер, истратив последние силы.</p></section>
+    <section class="chapter"><h2>8. Искры сердца и завершение рассказа</h2><p>Люди были настолько захвачены радостью спасения, что не сразу заметили смерть Данко. Один осторожный человек, боясь чего-то, наступил на ещё горевшее сердце. Оно рассыпалось на голубые искры, которые иногда появляются в степи перед грозой. Так подвиг Данко почти сразу оказался забыт теми, ради кого он пожертвовал собой.</p><p>Когда Изергиль заканчивает рассказ, повествователь смотрит на темноту и замечает вдали голубые огни. Они напоминают ему искры сердца Данко. Ночь, море и степь словно продолжают легенду, соединяя настоящее с древними историями.</p></section>
+    <section class="chapter"><h2>9. Что объединяет три истории</h2><p>Ларра, Изергиль и Данко представляют разные способы жить. Ларра считает, что ему никто не нужен и что его желания важнее чужой жизни. Он получает вечное одиночество: свобода без любви и ответственности становится для него проклятием.</p><p>Данко, напротив, думает прежде всего о других. Он рискует собой, хотя люди неблагодарны и даже готовы его убить. Его поступок становится символом самопожертвования, мужества и любви к людям. Изергиль находится между этими полюсами: она живёт ради сильных чувств и собственной свободы, но её жизнь не превращается ни в ледяное одиночество Ларры, ни в абсолютный подвиг Данко.</p></section>
+    <section class="chapter"><h2>10. Главная мысль и итог</h2><p>В рассказе Горький размышляет о том, что делает человека по-настоящему человеком. Одной силы, красоты и независимости недостаточно. Если человек полностью отрицает других, он теряет связь с миром. Но и настоящая смелость проявляется не в желании командовать, а в готовности действовать ради чего-то большего, чем собственная выгода.</p><p>Главный контраст — Ларра и Данко. Первый хочет брать у мира, ничего не отдавая, и оказывается один. Второй отдаёт последнее ради людей и становится легендой. История Изергиль связывает эти две легенды с реальной человеческой жизнью: она полна страсти, ошибок, свободы и воспоминаний. Финал оставляет ощущение, что подвиг может быть почти забыт, но его свет всё равно продолжает жить в памяти и воображении людей.</p></section>
+  </article>
+</section>
+<section id="readerPanel" class="panel hidden">
+  <div class="settings">
+    <label class="label">Часть <select id="partSelect" aria-label="Выбрать часть"></select></label>
+    <label class="label">Скорость <strong id="speedValue">180</strong> слов/мин <input id="speed" type="range" min="60" max="600" step="10" value="180"></label>
+    <label class="label">Размер слова <input id="fontSize" type="range" min="30" max="100" value="65"></label>
+    <label class="label"><input id="showContext" type="checkbox" checked> Показывать прогресс</label>
+  </div>
+  <div class="stage"><div id="word" class="word">Готов?</div></div>
+  <div id="context" class="context">Нажми «Старт»</div>
+  <div class="progress"><div id="progressFill"></div></div>
+  <div class="meta"><span id="counter">0 слов</span><span id="elapsed">Осталось: —</span></div>
+  <div class="controls">
+    <button class="primary" id="toggle">▶ Старт</button><button id="prev">← Назад</button><button id="next">Далее →</button><button id="restart">↺ Сначала</button><button id="wordFullscreen">⛶ На весь экран</button><button id="exitFull" class="hidden">✕ Выйти</button>
+  </div>
+  <p class="muted">Клавиши: пробел — пауза/старт, ← и → — предыдущее или следующее слово, Esc — выход из полноэкранного режима.</p>
+</section>
+<section id="partsPanel" class="panel hidden"><h2>Выбери часть пересказа</h2><div id="parts" class="parts"></div></section>
+<section class="panel"><h2>Персонажи и символы</h2><div class="keypoints">
+<article><h3>Ларра</h3><p>Гордыня, эгоизм, отрицание других людей. Его наказание — вечное одиночество.</p></article>
+<article><h3>Данко</h3><p>Мужество, любовь к людям, готовность пожертвовать собой ради их спасения.</p></article>
+<article><h3>Изергиль</h3><p>Свобода, страсть, жизненный опыт и личный выбор; не идеальный, а противоречивый человек.</p></article>
+<article><h3>Сердце</h3><p>Символ внутренней силы, бескорыстия и света, который помогает другим найти путь.</p></article>
+</div></section>
+<footer class="muted">Это подробный пересказ для подготовки к уроку, а не полный оригинальный текст рассказа.</footer>
 </main>
 <script>
-const sections = [
-{title:"1. Встреча с Изергиль",desc:"Рассказчик и старуха у моря",text:"Рассказчик работает в Бессарабии среди людей, собирающих виноград. Вечером он оказывается у моря рядом со старухой Изергиль. Она вспоминает свою молодость, говорит о людях, которых любила, и о том, как меняется человек с возрастом. Ночь, море и далёкие огни создают настроение легенды. Изергиль рассказывает две истории о человеческой гордости и самопожертвовании, а между ними — историю собственной жизни."},
-{title:"2. Легенда о Ларре",desc:"Гордыня и одиночество",text:"Давным-давно жило сильное племя. Однажды орёл похитил девушку и унёс её в горы. Спустя годы девушка вернулась с сыном Ларрой: его отцом был орёл. Юноша был красивым, сильным и гордым, но не уважал никого, кроме себя. Когда старейшины племени пытались научить его жить среди людей, он отвечал презрением. Дочь одного из старейшин оттолкнула Ларру, и он убил её, потому что считал, что может распоряжаться чужой жизнью. Люди хотели наказать его, но не могли решить, какое наказание будет справедливым. Отец девушки объяснил, что Ларра считает себя выше всех и не признаёт ни законов, ни чужих чувств. Племя оттолкнуло юношу. Сначала Ларра пытался силой вернуть себе свободу, но постепенно понял, что люди не хотят иметь с ним дела. Его не могли убить: он был почти неуязвим. Тогда старейшины обрекли его на вечное одиночество. Ларра стал тенью, обречённой скитаться по миру. Легенда показывает, что человек, который живёт только для себя и отвергает остальных, в итоге теряет даже возможность быть рядом с людьми."},
-{title:"3. История жизни Изергиль",desc:"Любовь, свобода и выбор",text:"После легенды о Ларре Изергиль рассказывает о собственной жизни. В юности она была красивой, независимой и страстной. Она рано полюбила, но не хотела оставаться там, где её свободу ограничивали. В её жизни были разные мужчины: рыбак, гуцул, турок, поляк и другие. Одних она любила, к другим быстро остывала, а иногда рисковала собой ради человека, который был ей дорог. Изергиль не считает свою жизнь спокойной или правильной: она жила ярко, принимала решения сама и не хотела принадлежать кому-либо. Она вспоминает, как помогла человеку, которого собирались казнить, и как однажды ради любви пошла на опасный поступок. Со временем молодость и красота ушли, любимые люди остались в прошлом, а она сама состарилась. Теперь Изергиль понимает, что страсть проходит, но поступки и память о прожитой жизни остаются. Её история сложнее легенд: она не идеальна, однако всю жизнь стремилась самостоятельно выбирать свой путь."},
-{title:"4. Легенда о Данко",desc:"Сердце, которое осветило путь",text:"Когда-то одно племя оказалось среди непроходимого леса и болот. Вокруг были враги, впереди — тьма и опасность. Люди испугались, потеряли надежду и начали обвинять друг друга. Тогда появился Данко — молодой, смелый и красивый человек. Он вызвался вывести племя из леса. Люди пошли за ним, но путь оказался долгим и тяжёлым. Устав, они стали злиться на Данко и даже захотели убить его за то, что он привёл их в опасное место. Данко видел страх и слабость людей, но любил их и хотел спасти. Его сердце загорелось огромной любовью к людям. Он вырвал из груди собственное сердце, поднял его над головой, и оно вспыхнуло ярким огнём, осветив путь сквозь тёмный лес. Увидев свет, люди снова обрели надежду и побежали за Данко. Он вывел их на открытую землю и упал, обессиленный. Данко умер, не требуя благодарности. Один осторожный человек наступил на его горящее сердце, и оно рассыпалось искрами. Легенда прославляет бескорыстную любовь, мужество и готовность пожертвовать собой ради спасения других."},
-{title:"5. Финал и смысл произведения",desc:"Два противоположных пути",text:"Закончив рассказ о Данко, Изергиль замолкает. Рассказчик смотрит на степь и замечает голубые искры, похожие на остатки пылающего сердца. Ночь и море усиливают ощущение тайны. В произведении сопоставлены три жизненных пути. Ларра ставит себя выше всех и получает вечное одиночество. Данко отдаёт себя ради других и становится символом подвига. Изергиль проживает жизнь свободно, через любовь, риск и личный выбор, хотя со временем понимает, что молодость не вечна. Горький ставит вопрос: что делает жизнь по-настоящему значимой — забота только о себе или способность выйти за пределы собственных интересов? Произведение не сводится к простому правилу, но особенно ярко показывает, что гордыня отрывает человека от мира, а самоотверженность способна дать другим надежду."}
-];
 const $=id=>document.getElementById(id);
-let current=0, words=[], index=0, timer=null, running=false;
-function splitWords(text){return text.trim().split(/\s+/)}
-function loadSection(n,autoplay=false){pause();current=n;words=splitWords(sections[current].text);index=0;$("partSelect").value=String(current);renderParts();render();if(autoplay)play()}
-function renderParts(){$("parts").innerHTML="";sections.forEach((s,i)=>{const b=document.createElement("button");b.className="part"+(i===current?" active":"");b.innerHTML="<strong>"+s.title+"</strong><span>"+s.desc+"</span>";b.onclick=()=>loadSection(i);$("parts").appendChild(b)})}
-function render(){const w=words[index];$("word").textContent=w||"Готово";$("word").classList.toggle("empty",!w);$("context").textContent=$("showContext").checked?(sections[current].title+" · "+(w?("слово "+(index+1)+" из "+words.length):"часть завершена")):"";$("counter").textContent=(w?index+1:words.length)+" / "+words.length+" слов";$("progressFill").style.width=(words.length?Math.min(100,index/words.length*100):0)+"%";const remain=Math.max(0,words.length-index);$("elapsed").textContent="Осталось: "+(remain?Math.ceil(remain/(+$("speed").value))+" мин":"0 мин");$("prev").disabled=index<=0;$("next").disabled=index>=words.length-1;$("toggle").textContent=running?"Ⅱ Пауза":(index>=words.length?"↺ Повторить":"▶ Старт");}
+const textSections=[...document.querySelectorAll("#retelling .chapter")].map((el,i)=>({title:el.querySelector("h2").textContent,desc:"Подробный пересказ",text:[...el.querySelectorAll("p")].map(p=>p.textContent).join(" ")}));
+let current=0,words=[],index=0,timer=null,running=false;
 function pause(){running=false;if(timer){clearTimeout(timer);timer=null}if($("toggle"))$("toggle").textContent="▶ Старт"}
-function play(){if(index>=words.length)index=0;running=true;render();tick()}
+function renderParts(){const box=$("parts");box.innerHTML="";textSections.forEach((s,i)=>{const b=document.createElement("button");b.className="part"+(i===current?" active":"");const strong=document.createElement("strong");strong.textContent=s.title;const span=document.createElement("span");span.textContent=s.desc;b.append(strong,span);b.onclick=()=>loadSection(i);box.appendChild(b)})}
+function render(){const w=words[index];$("word").textContent=w||"Готово";$("counter").textContent=(w?index+1:words.length)+" / "+words.length+" слов";$("progressFill").style.width=(words.length?Math.min(100,index/words.length*100):0)+"%";$("elapsed").textContent="Осталось: "+(index<words.length?Math.ceil((words.length-index)/(+$("speed").value))+" мин":"0 мин");$("context").textContent=$("showContext").checked?(textSections[current].title+" · слово "+Math.min(index+1,words.length)+" из "+words.length):"";$("prev").disabled=index<=0;$("next").disabled=index>=words.length-1;if(!running)$("toggle").textContent=index>=words.length?"↺ Повторить":"▶ Старт"}
+function loadSection(n){pause();current=n;words=textSections[n].text.trim().split(/\s+/);index=0;$("partSelect").value=String(n);renderParts();render()}
 function tick(){if(!running)return;if(index>=words.length){pause();render();return}render();timer=setTimeout(()=>{index++;if(index>=words.length){pause();render()}else tick()},60000/(+$("speed").value))}
-$("toggle").onclick=()=>running?pause():play();
-$("prev").onclick=()=>{pause();index=Math.max(0,index-1);render()};
-$("next").onclick=()=>{pause();index=Math.min(words.length-1,index+1);render()};
-$("restart").onclick=()=>{pause();index=0;render()};
-$("speed").oninput=()=>{$("speedValue").textContent=$("speed").value;if(running){if(timer)clearTimeout(timer);tick()}else render()};
-$("fontSize").oninput=()=>{$("word").style.fontSize="clamp(2rem,"+$("fontSize").value/10+"vw,5.4rem)"};
-$("showContext").onchange=render;
-$("partSelect").onchange=e=>loadSection(+e.target.value);
-sections.forEach((s,i)=>{const o=document.createElement("option");o.value=i;o.textContent=s.title;$("partSelect").appendChild(o)});
-document.addEventListener("keydown",e=>{if(e.target.matches("input,select,textarea"))return;if(e.code==="Space"){e.preventDefault();running?pause():play()}if(e.key==="ArrowRight")$("next").click();if(e.key==="ArrowLeft")$("prev").click()});
+function play(){if(index>=words.length)index=0;running=true;$("toggle").textContent="Ⅱ Пауза";tick()}
+function toggleFullscreenText(){document.body.classList.toggle("reading-mode");$("textFullscreen").textContent=document.body.classList.contains("reading-mode")?"⛶ Обычный вид":"⛶ На весь экран"}
+function showReader(){pause();$("textPanel").classList.add("hidden");$("readerPanel").classList.remove("hidden");$("partsPanel").classList.remove("hidden");window.scrollTo(0,0)}
+function showText(){pause();$("readerPanel").classList.add("hidden");$("partsPanel").classList.add("hidden");$("textPanel").classList.remove("hidden");window.scrollTo(0,0)}
+function enterWordFull(){document.body.classList.add("word-fullscreen");$("exitFull").classList.remove("hidden");if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{})}
+function exitWordFull(){document.body.classList.remove("word-fullscreen");$("exitFull").classList.add("hidden");if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen().catch(()=>{})}
+$("showTextBtn").onclick=showText;$("showReaderBtn").onclick=showReader;$("fullTextBtn").onclick=()=>{showText();if(!document.body.classList.contains("reading-mode"))toggleFullscreenText()};$("textFullscreen").onclick=toggleFullscreenText;$("backTop").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});$("textSize").oninput=()=>{$("retelling").style.fontSize=$("textSize").value+"px";$("retelling").querySelectorAll("p").forEach(p=>p.style.fontSize="1em")};
+$("toggle").onclick=()=>running?pause():play();$("prev").onclick=()=>{pause();index=Math.max(0,index-1);render()};$("next").onclick=()=>{pause();index=Math.min(words.length-1,index+1);render()};$("restart").onclick=()=>{pause();index=0;render()};$("wordFullscreen").onclick=enterWordFull;$("exitFull").onclick=exitWordFull;$("speed").oninput=()=>{$("speedValue").textContent=$("speed").value;if(running){if(timer)clearTimeout(timer);tick()}else render()};$("fontSize").oninput=()=>{$("word").style.fontSize="clamp(2rem,"+($("fontSize").value/10)+"vw,9rem)"};$("showContext").onchange=render;$("partSelect").onchange=e=>loadSection(+e.target.value);
+textSections.forEach((s,i)=>{const o=document.createElement("option");o.value=i;o.textContent=(i+1)+". "+s.title;$("partSelect").appendChild(o)});
+document.addEventListener("keydown",e=>{if(e.target.matches("input,select,textarea"))return;if(e.code==="Space"&&!$("readerPanel").classList.contains("hidden")){e.preventDefault();running?pause():play()}if(e.key==="ArrowRight"&&!$("readerPanel").classList.contains("hidden"))$("next").click();if(e.key==="ArrowLeft"&&!$("readerPanel").classList.contains("hidden"))$("prev").click();if(e.key==="Escape")exitWordFull()});
 loadSection(0);
 </script>
 </body>
