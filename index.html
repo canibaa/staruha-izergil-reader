@@ -77,7 +77,7 @@ function render(){const w=words[index];$("word").textContent=w||"Готово";$
 function loadSection(n){pause();current=n;words=textSections[n].text.trim().split(/\s+/);index=0;$("partSelect").value=String(n);renderParts();render()}
 function tick(){if(!running)return;if(index>=words.length){pause();render();return}render();timer=setTimeout(()=>{index++;if(index>=words.length){pause();render()}else tick()},60000/(+$("speed").value))}
 function play(){if(index>=words.length)index=0;running=true;$("toggle").textContent="Ⅱ Пауза";tick()}
-function toggleFullscreenText(){document.body.classList.toggle("reading-mode");$("textFullscreen").textContent=document.body.classList.contains("reading-mode")?"⛶ Обычный вид":"⛶ На весь экран"}
+function toggleFullscreenText(){const on=document.body.classList.toggle("reading-mode");$("textFullscreen").textContent=on?"⛶ Обычный вид":"⛶ На весь экран";if(on&&document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{});else if(!on&&document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen().catch(()=>{})}
 function showReader(){pause();$("textPanel").classList.add("hidden");$("readerPanel").classList.remove("hidden");$("partsPanel").classList.remove("hidden");window.scrollTo(0,0)}
 function showText(){pause();$("readerPanel").classList.add("hidden");$("partsPanel").classList.add("hidden");$("textPanel").classList.remove("hidden");window.scrollTo(0,0)}
 function enterWordFull(){document.body.classList.add("word-fullscreen");$("exitFull").classList.remove("hidden");if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{})}
